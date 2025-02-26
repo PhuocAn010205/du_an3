@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+:root{
+    --header-bg: #10375C;
+}
 html {
     font-size: 62.5%;
  }
@@ -9,4 +11,62 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", serif;
+}
+/*Css dung chung*/
+.contaier {
+    width: 1170px;
+    max-width: calc(1170 - 48px);/*Khi chieu dai cua trang web nho hon 1170 thi giup cho trang le trai va phai co kc 24px*/
+    margin: 0 auto;/*can giua*/
+}
+a {
+    text-decoration: none;
+}
+/**/
+.header {
+    min-height: 100vh;
+    background: var(--header-bg);
+}
+.logo {
+    display: inline-flex;/*vua co thuoc tinh cua flex va vua co inline giong box do khong bi rong ra*/
+    font-size: 1rem;/*tai sao lai dung rem vi khi dung rem minh quy dinh no la 10px*/
+    position: relative;
+}
+.logo__circle::before,
+.logo__circle::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+.logo__circle::before{
+    width: 3em;/*tai sao lai dung em hay vi dung rem bua gi
+     em se phu thuoc kich thuoc truoc do o tren hinh minh css 
+     font size la 1rem duoi day em se lay font-size nhu v.Neu sau nay khach hang muon phong to logo len 
+     thi minh chi can sua font-size cua rem thi cac em se tu thay doi*/
+    height: 3em;
+    background: #2e80ce; 
+}
+.logo__circle::after{
+    width: 1.6em;
+    height: 1.6em;
+    background: #fff;
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+}
+.logo__text{
+    margin-left: 0.6em;
+    text-align: right;
+    line-height: 1.6em
+
+}
+.logo__brand {
+    display: block;
+    color: #FFF;
+    font-size: 1.8em;
+    font-style: normal;
+    font-weight: 400;
+}
+.logo__brand--small{
+    font-size: 1.2em;
+    font-weight: 300;
 }
