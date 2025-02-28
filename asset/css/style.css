@@ -227,7 +227,7 @@ a {
     width: 570px;
     height: 570px;
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: cover;/*Cong dung can anh o giua*/
 }
 .service-item {
     display: flex;
@@ -278,4 +278,53 @@ a {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.75; /* 175% */
+}
+.work {
+    background: #F6FBFF;
+    padding: 100px 0;
+}
+.work_desc {
+    width: 468px;
+
+}
+.work__list{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/*dung repeat 3 de lap laij gia cot 3 lan,Tao ra 3 cot bang nhau "fr"*/
+    column-gap: 30px;/*Tao khoang cach cac cot = column-gap*/
+
+}
+.work__item {
+    border: 16px solid #EAF6FF;
+    border-radius: 4px;
+    padding: 44px;
+    transition: 0.25s;
+}
+.work__item:hover {
+    transform: translateY(-16px);
+    border-color:#2E80CE ;
+}
+
+.work-item__heading{
+    margin-top: 20px;
+    color: #10375C;
+    font-size:2.6rem;
+    font-weight: 600;
+    line-height:1.38; /* 138.462% */
+}
+.more,
+.work-item__desc {
+    margin-top: 28px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75; /* 175% */
+}
+.more {
+    display: inline-block;/*Do the a la the inline nen ko ap dung dc margin-top nen can de thanh inline-block*/
+    margin-top: 18px;
+    transition: 0.25s;
+}
+.work__item:hover .more{
+    color: pink;
 }
