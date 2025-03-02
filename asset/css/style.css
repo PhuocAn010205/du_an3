@@ -569,4 +569,23 @@ a {
     color: #10375C;
     font-size: 1.4rem;
     font-weight: 500;
+  
  }
+.new-item__more:hover{
+    color:#2E80CE;
+ }
+ /* appointment */
+ .appointment {
+    margin-top: 85px 0 170px;
+ }
+ .appointment__niner {
+ background: #F6FBFF;
+ padding: 100px 70px;
+ text-align: center;
+ }
+.appointment__heading::before {
+    content: "";
+    width: 136px;
+    height: 2px;
+    background: #2E80CE;
+}
