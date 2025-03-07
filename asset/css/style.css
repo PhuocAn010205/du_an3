@@ -5,6 +5,7 @@
     --header-bg: #10375C;
 }
 html {
+    scroll-behavior: smooth;/*Khi click vao link thi trang web se cuon dan dan xuong*/
     font-size: 62.5%;
  }
 
@@ -63,10 +64,14 @@ input, textarea, select, button{
     /* Dung de reset nhung the form */
 }
 
-/**/
+/*header*/
+.fixed {
+    position: sticky;
+    top: -28px;
+    z-index: 999;
+}
 .header {
-    padding-top: 30px;
-    min-height: 100vh;
+    padding: 30px 0 10px;
     background: var(--header-bg);
 }
 .logo {
@@ -160,21 +165,26 @@ input, textarea, select, button{
 /*Phan css hero*/
 .hero {
     flex-shrink: 0;/*Giup chu hoac hinh anh khong bi coi nho */
-    margin-top: 76px;
+    padding-top: 76px;
+    background: var(--header-bg);
+  
+}
+.body {
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
 .hero__content {
     width: 44%;
 }
 .hero__media{
-    flex-grow: 1; /* Cong dung cua flex-grow se giup phan tu chien het dien tich con lai */  
+    flex-grow: 1; 
+    padding-bottom: 110px;/* Cong dung cua flex-grow se giup phan tu chien het dien tich con lai */  
 }
-.hero__heading {
+ .hero__heading {
     color: #FFF;
     font-size: 7rem;
     font-weight: 600;
-    line-height: 1.14; /* 114.286% */
+    line-height: 1.14; 
     letter-spacing: -0.02em;
 }
 .hero__desc {
@@ -182,7 +192,7 @@ input, textarea, select, button{
     color: #C9D2DA;
     font-size: 1.8rem;
     font-weight: 300;
-    line-height: 1.66; /* 166.667% */
+    line-height: 1.66; 
 }
 .hero__row {
     display: flex;
@@ -194,12 +204,12 @@ input, textarea, select, button{
     color: #FFF;
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 1.66; /* 166.667% */
+    line-height: 1.66; 
 }
-.hero__images {
+ .hero__images {
  display: flex;
   align-items: center;
-  justify-content: flex-end;/*de cho box di chuyen vai cuoi*/
+  justify-content: flex-end; /*Can phan tu ve phia ben phai*/
 }
 .hero__img{
     width: 330px;
@@ -214,7 +224,7 @@ input, textarea, select, button{
 .hero__img:last-child{
     width: 210px;
     height: 410px;
-}
+}  
 /* Service */
 .service{
     padding: 170px 0;
@@ -614,9 +624,8 @@ input, textarea, select, button{
 }
 /* footer */
 .footer{
-    margin-bottom: 500px;
     background: #10375C;
-    padding: 100px 0;
+    padding-top: 100px;
     font-family: "Open Sans", serif;
 }
 .footer__row {
@@ -691,6 +700,7 @@ input, textarea, select, button{
   border: 1px solid #406181;
   background: transparent;
   padding: 0 10px;
+  color: #FFF;
 }
 .footer-form__input::placeholder{
     color: #9CA8B1;
@@ -705,7 +715,8 @@ input, textarea, select, button{
     font-size: 1.4rem;
 }
 .footer__copyright {
-    border-top: 1px solid #406181;;
+    border-top: 1px solid #406181;
+    padding: 28px 0 42px;
 }
 .footer__copyright-text{
     color: #AAB3BA;

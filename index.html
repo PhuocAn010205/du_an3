@@ -34,48 +34,57 @@
     <title>Document</title>
 </head>
 <body>
-   <header class="header">
-    <div class="container">
-        <!--Header-top-->
-         <div class="header-top">
-            <a href="#!">
-                <div class="logo">
-                    <span class="logo__circle">
-    
-                    </span>
-                    <span class="logo__text">
-                        <span class="logo__brand">shine</span>
-                        <span class="logo__brand logo__brand--small ">smile</span>
-                    </span>
-                </div>
-            </a>
-
-            <!--Menu-->
-            <nav class="navbar">
-                <ul class="navbar__list">
-                    <li class="navbar__item ">
-                        <a href="#!" class="navbar__link navbar__link--active">Home</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">Services</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">About</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#!" class="navbar__link">Doctors</a>
-                    </li>
-                </ul>
-            </nav>
-        <!--Action-->
-        <div class="header-action">
-            <a href="#!" class="header-action__login">Log In</a>
-            <button class="btn header-action__signup">Sign Up</button>
+    <!--Header-->
+            <header class="header fixed">
+                <div class="container">
+                    <!--Header-top-->
+                     <div class="header-top ">
+                        <a href="#!">
+                            <div class="logo">
+                                <span class="logo__circle">
+                
+                                </span>
+                                <span class="logo__text">
+                                    <span class="logo__brand">shine</span>
+                                    <span class="logo__brand logo__brand--small ">smile</span>
+                                </span>
+                            </div>
+                        </a>
+            
+                        <!--Menu-->
+                        <nav class="navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item ">
+                                    <a href="#home" class="navbar__link">Home</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#services" class="navbar__link">Services</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#work" class="navbar__link">About</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#doctor" class="navbar__link">Doctors</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#footer" class="navbar__link">Footer</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    <!--Action-->
+                    <div class="header-action">
+                        <a href="#!" class="header-action__login">Log In</a>
+                        <button class="btn header-action__signup">Sign Up</button>
+                    </div>
+                     </div>
         </div>
-         </div>
-
-         <!--Hero-->
-         <section class="hero">
+        
+     </header>
+   <main>
+    <!-- Phan Hero -->
+     <section class="hero" id="home">
+        <div class="container">
+            <div class="body">
             <section class="hero__content">
                 <h1 class="hero__heading">
                     Exceptional dental care for all ages.
@@ -88,19 +97,17 @@
                   </span>
                 </div>
             </section>
-         <!--Hero media-->
+            <!-- Hero media -->
               <div class="hero__media">
                 <figure class="hero__images">
                     <img src="./asset/img/bsanime.jpg" alt="" class="hero__img">
                     <img src="./asset/img/bsanime1.jpg" alt="" class="hero__img">
                 </figure>
-              </div>
-         </section>
-
-    </div>
-   </header>
-   <main>
-    <section class="service">
+             
+            </div>    
+            </div>    
+     </section>
+    <section class="service" id="services">
         <div class="container">
             <h2 class="service__heading section-heading">Our services</h2>
             <p class="service__desc section-desc">Exceptional dental care for all ages.
@@ -169,7 +176,7 @@
         </div>
     </section>
     <!--Work-->
-      <section class="work">
+      <section class="work" id="work"> >
          <div class="container">
             <h2 class="section-heading">How it works</h2>
             <p class="section-desc work_desc">Exceptional dental care for all ages. Your great smile begins with a great dentist.
@@ -221,7 +228,7 @@
         
        </section>
        <!-- Member -->
-        <section class="member">
+        <section class="member" id="doctor">
             
             <div class="container">
                 <header class="member__header">
@@ -379,7 +386,7 @@
            </section>
     </main>
     <!-- Footer -->
-     <footer class="footer">
+     <footer class="footer" id="footer">
         
         <div class="container">
             <div class="footer__row">
@@ -457,7 +464,18 @@
                 </p>
             </div>
         </div>
-        
      </footer>
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbarLinks = document.querySelectorAll('.navbar__link');
+
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navbarLinks.forEach(navLink => navLink.classList.remove('navbar__link--active'));
+                this.classList.add('navbar__link--active');
+            });
+        });
+    });
+     </script>
 </body>
 </html>
